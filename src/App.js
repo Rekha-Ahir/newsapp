@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import NavBar from './components/NavBar';
 import News from './components/News';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
   
@@ -21,7 +21,7 @@ const App = ()=> {
  
     return (
       <div>
-        <BrowserRouter>
+        <HashRouter>
         <NavBar/> 
         <LoadingBar
         height={3}
@@ -38,7 +38,7 @@ const App = ()=> {
           <Route  path="/sports" element ={<News setProgress={setProgress} key="sports" pageSize={pageSize} country="in" category="sports"/>}/> 
           <Route  path="/technology" element ={<News setProgress={setProgress} key="technology" pageSize={pageSize} country="in" category="technology"/>}/> 
           </Routes>
-          </BrowserRouter>
+          </HashRouter>
       </div>
     )
  
